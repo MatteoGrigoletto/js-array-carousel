@@ -20,7 +20,7 @@ for(let i=0;i<imageList.length;i++){
         
     }
         boxImg.append(divImg);
-        boxImg.append(img);
+        divImg.append(img);
         console.log(divImg)
         console.log(img)
 
