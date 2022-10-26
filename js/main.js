@@ -8,15 +8,16 @@ let imagesList = [
     '../img/05.jpg'
 ];
 
-let items=document.querySelector('.items');
-let active=0; 
+let items = document.querySelector('.items');
+let active = 0; 
 for (let i = 0; i < imagesList.length; i++){
-    items.innerHTML +=`<div class="item"><img src="${imagesList[i]}" alt="img1"></div>`;             
+    items.innerHTML +=
+    `<div class="item"><img src="${imagesList[i]}" alt="img1"></div>`;             
 }           
 document.querySelector('.item').classList.add('d-block');
 
 document.querySelector('.after').addEventListener("click" , function(){
-    let img = document.querySelector('.item');
+    let img = document.querySelectorAll('.item');
 
     if(active == img.length-1){
         img[active].classList.remove('d-block');
@@ -28,4 +29,5 @@ document.querySelector('.after').addEventListener("click" , function(){
         active= active+1;
         img[active].classList.add('d-block');
         }
-    });
+});
+
