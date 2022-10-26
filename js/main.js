@@ -11,18 +11,20 @@ let imageList = [
 const boxImg = document.getElementById('box-img');
 
 for(let i=0;i<imageList.length;i++){
-    const imgPrint = imageList[i];
+
+    let imgPrint = imageList[i];
     let divImg = document.createElement('div');
     let img = document.createElement('img');
     img.setAttribute("src", imageList[i]);
-    if(imageList[0] === imgPrint){
 
-        
+    if(imageList[0] === imgPrint){
+        divImg.classList.add('d-block')   
     }
-        boxImg.append(divImg);
-        divImg.append(img);
-        console.log(divImg)
-        console.log(img)
+    
+    boxImg.append(divImg);
+    divImg.append(img);
+    console.log(divImg)
+    console.log(img)
 
     
 }
