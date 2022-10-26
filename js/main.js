@@ -17,17 +17,29 @@ for (let i = 0; i < imagesList.length; i++){
 document.querySelector('.item').classList.add('d-block');
 
 document.querySelector('.after').addEventListener("click" , function(){
-    let img = document.querySelectorAll('.item');
+let img = document.querySelectorAll('.item');
 
-    if(active == img.length-1){
-        img[active].classList.remove('d-block');
-        active=0;
-        img[active].classList.add('d-block');
+if(active == img.length-1){
+    img[active].classList.remove('d-block');
+    active = 0;
+    img[active].classList.add('d-block');
+}
+else{
+    img[active].classList.remove('d-block');
+    active += 1;
+    img[active].classList.add('d-block');
     }
-    else{
+});
+document.querySelector('.before').addEventListener("click" , function(){
+    let img = document.querySelectorAll('.item');
+    if(active == 0){
         img[active].classList.remove('d-block');
-        active= active+1;
+        active = img.length-1;
         img[active].classList.add('d-block');
         }
-});
-
+        else{
+            img[active].classList.remove('d-block');
+            active -= 1;
+            img[active].classList.add('d-block');
+        }
+    });
