@@ -15,11 +15,12 @@ for (let i = 0; i < imagesList.length; i++){
     `<div class="item"><img src="${imagesList[i]}" alt="img1"></div>`;             
 }           
 document.querySelector('.item').classList.add('d-block');
-
-document.querySelector('.after').addEventListener("click" , function(){
 let img = document.querySelectorAll('.item');
 
+document.querySelector('.after').addEventListener("click" , function(){
+console.log(img);
 if(active == img.length-1){
+    
     img[active].classList.remove('d-block');
     active = 0;
     img[active].classList.add('d-block');
@@ -31,7 +32,8 @@ else{
     }
 });
 document.querySelector('.before').addEventListener("click" , function(){
-    let img = document.querySelectorAll('.item');
+    
+    console.log(img);
     if(active == 0){
         img[active].classList.remove('d-block');
         active = img.length-1;
@@ -42,4 +44,4 @@ document.querySelector('.before').addEventListener("click" , function(){
             active -= 1;
             img[active].classList.add('d-block');
         }
-    });
+    }); 
