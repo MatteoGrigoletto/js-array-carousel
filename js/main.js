@@ -12,7 +12,7 @@ let items = document.querySelector('.items');
 let active = 0; 
 for (let i = 0; i < imagesList.length; i++){
     items.innerHTML +=
-    `<div class="item"><img src="${imagesList[i]}" alt="img1"></div>`;             
+    `<div class="item"><img src="${imagesList[i]}" alt=""></div>`;             
 }           
 document.querySelector('.item').classList.add('d-block');
 let img = document.querySelectorAll('.item');
@@ -31,6 +31,7 @@ else{
     img[active].classList.add('d-block');
     }
 });
+
 document.querySelector('.before').addEventListener("click" , function(){
     
     console.log(img);
