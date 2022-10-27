@@ -19,30 +19,25 @@ let img = document.querySelectorAll('.item');
 
 document.querySelector('.after').addEventListener("click" , function(){
 console.log(img);
+img[active].classList.remove('d-block');
 if(active == img.length-1){
-    
-    img[active].classList.remove('d-block');
     active = 0;
-    img[active].classList.add('d-block');
 }
 else{
-    img[active].classList.remove('d-block');
-    active += 1;
-    img[active].classList.add('d-block');
+    active++;
     }
+    img[active].classList.add('d-block');
 });
 
 document.querySelector('.before').addEventListener("click" , function(){
     
     console.log(img);
-    if(active == 0){
-        img[active].classList.remove('d-block');
+    img[active].classList.remove('d-block');
+    if(active == 0){   
         active = img.length-1;
-        img[active].classList.add('d-block');
         }
         else{
-            img[active].classList.remove('d-block');
-            active -= 1;
-            img[active].classList.add('d-block');
+            active--;
         }
+        img[active].classList.add('d-block');
     }); 
